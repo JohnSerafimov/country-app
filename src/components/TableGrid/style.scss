@@ -1,0 +1,46 @@
+@import "../../shared/scss/variables";
+@import "../../shared/scss/mixins";
+
+.table-grid-container {
+    width: 100%;
+    max-height: 631px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    .table-grid {
+        background-color: $white;
+        border: 1px solid $white;
+        .table-header {
+            color: $white;
+            background-color: $primary-color;
+        }
+        .MuiDataGrid-row {
+            cursor: pointer;
+            &:hover {
+                color: $primary-color;
+            }
+            .table-cell {
+                padding: 0;
+                .row-cell {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 10px;
+                }
+                .table-icon {
+                    width: 50px;
+                    height: auto;
+                }
+            }
+        }
+        .MuiDataGrid-virtualScroller {
+            @include scrollSettings;
+        }
+    }
+    .loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+}

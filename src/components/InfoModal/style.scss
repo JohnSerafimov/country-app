@@ -1,0 +1,45 @@
+@import "../../shared/scss/variables";
+@import "../../shared/scss/mixins";
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        max-width: 400px;
+        padding: 10px 0;
+        background-color: $white;
+        border-radius: 5px;
+        .modal-header {
+            font-weight: bold;
+        }
+        .modal-detail-container {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            margin: 10px 0;
+            &.double-row {
+                flex-direction: column;
+                .modal-detail-row {
+                    display: flex;
+                    justify-content: space-between;
+                    &.first {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .modal-details {
+                text-align: right;
+            }
+        }
+        .modal-icon {
+            width: 50px;
+            height: auto;
+        }
+    }
+}
